@@ -90,6 +90,24 @@ npm run mem_backend &
 npm run ft_test
 ```
 
+## Configuring
+
+If you want to specify a specific endpoint (different from localhost),
+you need to add it to your config.json:
+
+```shell
+"regions": {
+
+     ...
+     "localregion": ["localhost"],
+     "specifiedregion": ["myhostname.com"]
+},
+```
+
+Our S3server support both:
+- path-style: http://myhostname.com/mybucket
+- hosted-style: http://mybucket.myhostname.com
+
 ## s3cmd versions
 
 If using s3cmd as a client to S3 be aware that v4 signature format
